@@ -78,7 +78,15 @@ public class Pantalla extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    void guardarOperador1() {
+        float numero; //inicia la var. numero
+        numero = Float.valueOf(espacio.getText()); //guarda en numero el valor de espacio
 
+        miCalculador.operador1 = numero; //objeto.atributo=valor
+
+        espacio.setText("");//espacio queda en blanco
+    }
+    
     private void btnSumaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSumaMouseClicked
         // TODO add your handling code here:
         guardarOperador1();
@@ -98,7 +106,7 @@ public class Pantalla extends javax.swing.JFrame {
 
         miCalculador.operador2 = numero;
 
-        switch (operador) {//condición de operador para evitar
+        switch (operador) {//condición de operador para evitar escribir tanto
             case 0:
                 miCalculador.sumar();
             case 1:
